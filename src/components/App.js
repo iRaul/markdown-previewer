@@ -19,8 +19,13 @@ const App = () => {
   )
 
   const toggleTheme = () => {
-    if (theme === 'light') setTheme('dark')
-    else setTheme('light')
+    if (theme === 'light') {
+      localStorage.setItem('theme', 'dark')
+      setTheme('dark')
+    } else {
+      localStorage.setItem('theme', 'light')
+      setTheme('light')
+    }
   }
 
   useEffect(() => {
@@ -29,8 +34,10 @@ const App = () => {
   }, [])
 
   useEffect(() => {
+    const localTheme = localStorage.getItem('theme')
+    localTheme && setTheme(localTheme)
     localStorage.setItem('default-md', markdown)
-  })
+  }, [markdown])
 
   return (
     <ThemeProvider theme={theme === 'light' ? light : dark}>
