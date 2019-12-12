@@ -6,13 +6,16 @@ const Textarea = styled.textarea`
   font-size: 15px;
   padding: 15px;
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: ${({ theme }) => theme.markdown.background};
+  color: ${({ theme }) => theme.markdown.color};
   border: none;
   outline: none;
   resize: none;
+  line-height: 1.5;
+  min-height: 500px;
 
   &:focus {
-    border-color: #555;
+    box-shadow: inset 0px 0px 0px 1px ${({ theme }) => theme.markdown.border};
   }
 `
 

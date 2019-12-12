@@ -20,8 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props =>
-      props.theme.mode === 'dark' ? '#222' : '#edf2f7'};
+    background-color: ${({ theme }) => theme.body};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color .3s ease;

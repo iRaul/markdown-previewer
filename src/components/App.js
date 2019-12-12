@@ -10,16 +10,17 @@ import Header from './Header'
 import Toggle from './Toggle'
 import Main from './Main'
 import { MoonIcon, SunIcon } from './Icons'
+import { light, dark } from './Theme'
 
 const App = () => {
-  const [theme, setTheme] = useState('default')
+  const [theme, setTheme] = useState('light')
   const [markdown, setMarkdown] = useState(
-    'Heading\n=======\n\nSub-heading\n-----------\n \n### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*'
+    'Heading\n=======\n\nSub-heading\n-----------\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*'
   )
 
   const toggleTheme = () => {
-    if (theme === 'default') setTheme('dark')
-    else setTheme('default')
+    if (theme === 'light') setTheme('dark')
+    else setTheme('light')
   }
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const App = () => {
   })
 
   return (
-    <ThemeProvider theme={{ mode: theme }}>
+    <ThemeProvider theme={theme === 'light' ? light : dark}>
       <>
         <GlobalStyle />
         <Container>
