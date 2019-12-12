@@ -6,6 +6,7 @@ import GlobalStyle from './Global'
 import Container from './Container'
 import Previewer from './Previewer'
 import Markdown from './Markdown'
+import RepoLink from './RepoLink'
 import Header from './Header'
 import Toggle from './Toggle'
 import Main from './Main'
@@ -56,6 +57,7 @@ const App = () => {
             <Previewer dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
           </Main>
         </Container>
+        <RepoLink />
       </>
     </ThemeProvider>
   )
