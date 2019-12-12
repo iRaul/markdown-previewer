@@ -14,6 +14,7 @@ export const light = {
     background: '#fff',
     color: '#000',
     links: 'rgb(60, 86, 226)',
+    code: '#dde1e6',
   },
 }
 
@@ -33,5 +34,6 @@ export const dark = {
     background: '#222',
     color: '#fff',
     links: 'rgb(135, 206, 235)',
+    code: '#363537',
   },
 }

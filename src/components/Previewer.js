@@ -10,6 +10,12 @@ const Previewer = styled.div`
   p {
     line-height: 1.5;
   }
+  pre {
+    background-color: ${({ theme }) => theme.previewer.code};
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+  }
 
   a {
     color: ${({ theme }) => theme.previewer.links};

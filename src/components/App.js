@@ -15,7 +15,7 @@ import { light, dark } from './Theme'
 const App = () => {
   const [theme, setTheme] = useState('light')
   const [markdown, setMarkdown] = useState(
-    'Heading\n=======\n\nSub-heading\n-----------\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*'
+    'Heading\n=======\n\n---\n\nSub-heading\n-----------\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nOrdered list:\n\n  * item\n  * item\n  * item\n\nNumbered list:\n\n  1. item\n  2. item\n  3. item\n\n```javascript \nvar s = "JavaScript syntax highlighting";\n\nalert(s);\n``` \n\n*[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)*'
   )
 
   const toggleTheme = () => {
